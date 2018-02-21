@@ -1,4 +1,4 @@
-WebSocket Chat Demo
+Chat Demo with WebSockets
 ===================
 
 This is a trivial demo with Tyrus how WebSockets could be implemented for 
