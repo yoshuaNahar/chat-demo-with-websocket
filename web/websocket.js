@@ -5,7 +5,7 @@ function connect() {
   ws = new WebSocket("ws://localhost:8080/chat/" + username);
 
   ws.onmessage = function (event) {
-    const log = document.getElementById("log");
+    const log = document.getElementById("chat_window");
     console.log(event.data);
     const message = JSON.parse(event.data);
     log.innerHTML += message.from + ": " + message.content + "\n";
@@ -13,7 +13,7 @@ function connect() {
 }
 
 function send() {
-  const content = document.getElementById("msg").value;
+  const content = document.getElementById("message").value;
   const json = JSON.stringify({
     "content": content
   });
